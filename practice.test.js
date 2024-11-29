@@ -38,17 +38,17 @@ test("25 - 4 equals 21", () => {
 });
 
 test("2 / 2 equals 1", () => {
-  expect(calculator.add(2, 2)).toBe(1);
+  expect(calculator.divide(2, 2)).toBe(1);
 });
 test("9 / 3 equals 3", () => {
-  expect(calculator.add(9, 3)).toBe(3);
+  expect(calculator.divide(9, 3)).toBe(3);
 });
 
 test("2 * 2 equals 4", () => {
-  expect(calculator.add(2, 2)).toBe(4);
+  expect(calculator.multiply(2, 2)).toBe(4);
 });
 test("5 * 8 equals 40", () => {
-  expect(calculator.add(5, 8)).toBe(40);
+  expect(calculator.multiply(5, 8)).toBe(40);
 });
 
 //caesar cipher

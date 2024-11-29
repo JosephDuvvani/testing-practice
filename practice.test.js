@@ -1,3 +1,11 @@
+import {
+  capitalise,
+  reverseString,
+  calculator,
+  caesarCipher,
+  analyzeArray,
+} from "./practice";
+
 //capitalise
 test("Capitalised 'joseph' is 'Joseph'", () => {
   expect(capitalise("joseph")).toBe("Joseph");

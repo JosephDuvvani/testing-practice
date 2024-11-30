@@ -20,3 +20,29 @@ export const calculator = {
   divide: (a, b) => a / b,
   multiply: (a, b) => a * b,
 };
+
+function isUpperCase(character) {
+  if (character === character.toLowerCase()) return false;
+  return true;
+}
+
+export const caesarCipher = (string, shift) => {
+  const alph = "abcdefghijklmnopqrstuvwxyz".split("");
+  const stringArr = string.split("");
+  let cipher = [];
+
+  stringArr.forEach((character) => {
+    const upperCase = isUpperCase(character);
+    let lower = character.toLowerCase();
+    if (!alph.includes(lower)) {
+      cipher.push(character);
+    } else {
+      let shiftIndex = alph.indexOf(lower) + shift;
+      while (shiftIndex > alph.length - 1) shiftIndex -= alph.length;
+      upperCase === true
+        ? cipher.push(alph[shiftIndex].toUpperCase())
+        : cipher.push(alph[shiftIndex]);
+    }
+  });
+  return cipher.join("");
+};

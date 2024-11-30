@@ -46,3 +46,23 @@ export const caesarCipher = (string, shift) => {
   });
   return cipher.join("");
 };
+
+export const analyzeArray = (array) => {
+  const sum = array.reduce((prev, curr) => prev + curr, 0);
+  const min = array.reduce(
+    (prev, curr) => (prev > curr ? (prev = curr) : prev),
+    array[0]
+  );
+  const max = array.reduce(
+    (prev, curr) => (prev < curr ? (prev = curr) : prev),
+    array[0]
+  );
+  const length = array.length;
+
+  return {
+    average: sum / length,
+    min: min,
+    max: max,
+    length: length,
+  };
+};
